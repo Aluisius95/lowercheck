@@ -11,12 +11,13 @@ var books = [
 
 var string = 'sig';
 
-for (var i = 0; i < books.length; i++) {
-  check(books[i]);
-}
-
-function check(book) {
+let check = (book) => {
   var concat = book.autore.toLowerCase() + ' ' + book.titolo.toLowerCase();
   appDiv.innerHTML +=
     '<p>' + concat + '<br>' + concat.includes(string) + '</p>';
 }
+
+for (var i = 0; i < books.length; i++) {
+  check(books[i]);
+}
+
